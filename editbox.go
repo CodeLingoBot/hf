@@ -18,7 +18,7 @@ type Editbox struct {
 	bg termbox.Attribute
 }
 
-// Draws the Editbox in the given location
+// Draw: Draws the Editbox in the given location
 func (e *Editbox) Draw(x, y, w int) {
 	e.AdjustVOffset(w)
 
@@ -51,7 +51,7 @@ func (e *Editbox) Draw(x, y, w int) {
 	}
 }
 
-// Adjusts line visual offset to a proper value depending on width
+// AdjustVOffset: Adjusts line visual offset to a proper value depending on width
 func (m *Editbox) AdjustVOffset(width int) {
 	ht := 0
 
@@ -142,7 +142,7 @@ func (m *Editbox) InsertRune(r rune) {
 	// fmt.Println("NEW", buf, string(m.text))
 }
 
-// Please, keep in mind that cursor depends on the value of line_voffset, which
+// CursorX: Please, keep in mind that cursor depends on the value of line_voffset, which
 // is being set on Draw() call, so.. call this method after Draw() one.
 func (m *Editbox) CursorX() int {
 	return m.cursor_voffset - m.line_voffset

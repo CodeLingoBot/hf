@@ -12,7 +12,7 @@ type ResultSet struct {
 	count   int
 }
 
-// Just for sorting
+// Len: Just for sorting
 func (rc ResultArray) Len() int {
 	return len(rc)
 }

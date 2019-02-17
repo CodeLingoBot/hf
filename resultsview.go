@@ -116,7 +116,7 @@ func (r *ResultsView) Update(results ResultArray) {
 
 }
 
-// If there isnt any marked, return the selection. Otherwise return the array of marked results.
+// GetMarkedOrSelected: If there isnt any marked, return the selection. Otherwise return the array of marked results.
 func (rv *ResultsView) GetMarkedOrSelected() ResultArray {
 	selected := make(ResultArray, 0, 1)
 

@@ -21,7 +21,7 @@ type BestScore struct {
 	highlight map[int]bool
 }
 
-// Return new pointer to  Matcher with relevant variables copied from the
+// Clone returns new pointer to  Matcher with relevant variables copied from the
 // original Matcher.
 func (m *Matcher) Clone() *Matcher {
 	var chars []int
